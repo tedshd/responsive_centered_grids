@@ -27,9 +27,9 @@ Now we can use media query & sass handle this problem easy.
 
 In `responsive_centered_grids.scss`.
 
-'$gridsWidth' is a grid width we can set.
+`$gridsWidth` is a grid width we can set.
 
 If your grid width too small or large and you want to change colums on browser.
 
-You can change '$columns'.
+You can change `$columns`.
 
