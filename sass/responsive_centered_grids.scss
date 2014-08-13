@@ -1,0 +1,29 @@
+/**
+ *
+ * @authors Ted Shiu (tedshd@gmail.com)
+ * @date    2014-08-13 10:20:19
+ * @version $Id$
+ */
+
+@import "compass";
+@import "compass/reset";
+
+$gridsWidth: 300px; // customize grids width
+
+#r_c_con {
+    margin: 0 auto;
+    .r_c_grids {
+        float: left;
+        width: $gridsWidth;
+    }
+}
+
+$columns: 10;
+
+@for $i from 1 through $columns {
+    @media only screen and (min-width : $gridsWidth*$i) {
+        #r_c_con {
+            width: $gridsWidth*$i;
+        }
+    }
+}

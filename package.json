@@ -1,0 +1,10 @@
+{
+  "name": "gulp",
+  "version": "3.8.7",
+  "description": "Gulp for miiiTV 2.0",
+  "author": "Ted Shiu",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-compass": "^1.2.0"
+  }
+}

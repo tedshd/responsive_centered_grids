@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="utf-8">
+<title>Responsive_Centered_Grids</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="css/responsive_centered_grids.css">
+<!-- <script src="/lib/angular_v1.2.16.js"></script> -->
+<script src="https://code.angularjs.org/1.2.16/angular.js"></script>
+<style>
+    #header {
+        padding: 5px;
+        background: #323;
+        color: #fff;
+        font-size: 2em;
+        text-align: center;
+    }
+</style>
+</head>
+<body ng-controller="screenShotController">
+    <div id="header">
+        Responsive Centered Grids
+    </div>
+    <div id="r_c_con">
+        <div class="r_c_grids" ng-repeat="list in data">
+            <img ng-src="{{list.content.src}}" alt="{{list.title.$t}}" width="100%">
+        </div>
+    </div>
+</body>
+<script>
+    function screenShotController ($scope, $http) {
+        var apiUrl = 'http://picasaweb.google.com/data/feed/base/user/TEDsHD/albumid/5263807088660719009?alt=json';
+        $http.jsonp(apiUrl + '&callback=JSON_CALLBACK').success(
+            function(data) {
+                console.log(data);
+                $scope.data = data.feed.entry;
+            }
+        );
+    }
+</script>
+</html>
