@@ -30,7 +30,7 @@
 </body>
 <script>
     function screenShotController ($scope, $http) {
-        var apiUrl = 'http://picasaweb.google.com/data/feed/base/user/TEDsHD/albumid/5263807088660719009?alt=json';
+        var apiUrl = 'https://emma.pixnet.cc/album/sets/5681828/elements?user=tysh310246&format=json';
         $http.jsonp(apiUrl + '&callback=JSON_CALLBACK').success(
             function(data) {
                 console.log(data);
