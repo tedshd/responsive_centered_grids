@@ -24,7 +24,7 @@
     </div>
     <div id="r_c_con">
         <div class="r_c_grids" ng-repeat="list in data">
-            <img ng-src="{{list.content.src}}" alt="{{list.title.$t}}" width="100%">
+            <img ng-src="{{list.thumb}}" alt="{{list.title}}" width="100%">
         </div>
     </div>
 </body>
@@ -34,7 +34,7 @@
         $http.jsonp(apiUrl + '&callback=JSON_CALLBACK').success(
             function(data) {
                 console.log(data);
-                $scope.data = data.feed.entry;
+                $scope.data = data.elements;
             }
         );
     }
